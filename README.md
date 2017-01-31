@@ -1,7 +1,7 @@
 # GPU computing with CUDA (Nvidia GPU)
 
 ### Hello World Example
-```
+```c
 int main() {
     int blocksize=2; int N=3;
     hello<<<blocksize,N>>>();

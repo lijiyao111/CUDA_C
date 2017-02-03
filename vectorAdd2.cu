@@ -1,3 +1,8 @@
+/*
+Two vector add together, a+b=c
+get familar with the thread and block indexing
+Here only use several blocks and several threads
+*/
 #include <stdio.h>
 
 void random_ints(int* a, int N){

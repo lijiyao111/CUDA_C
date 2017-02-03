@@ -1,8 +1,9 @@
-
-// Print Hello World
-// also print the block id and thread id within the block
- 
+/*
+Print Hello World
+also print the block id and thread id within the block
+*/
 #include <stdio.h> 
+
 const int N = 3; 
 const int blocksize = 2; 
  

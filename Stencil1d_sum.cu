@@ -44,6 +44,9 @@ __global__ void stencil_1d(int *in, int *out){
         result += temp[lidx+offset];
     }
     out[gidx - RADIUS]=result;
+
+    // if(threadIdx.x==0)
+    //     printf("hello\n");
 }
 
 int main(){

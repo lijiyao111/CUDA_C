@@ -4,8 +4,8 @@ also print the block id and thread id within the block
 */
 #include <stdio.h> 
 
-const int N = 3; 
-const int blocksize = 2; 
+const int Nthread = 3; 
+const int Nblock = 2; 
  
 __global__ void hello(void){
     printf("Hello world! block ID %d, thread ID %d\n",blockIdx.x,threadIdx.x);
@@ -13,6 +13,6 @@ __global__ void hello(void){
 }
 
 int main() {
-    hello<<<blocksize,N>>>();
+    hello<<<Nblock,Nthread>>>();
 
 }

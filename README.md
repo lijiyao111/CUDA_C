@@ -104,11 +104,13 @@ Number of threads in a block need to be power of 2 (automatically taken care of 
 
 Use shared memory for performance. Shared memory assigned when calling the kernal.`kernal<<<blockDim, threadDim, sharedMemSpace>>>()`
 
-- Reduce with small input (1 block).
-- > Code: reduce_small.cu
+- Reduce with small input (1 block)
+
+> Code: reduce_small.cu
 
 - Reduce with large input (many blocks)
-- > Code: reduce_large.cu
+
+> Code: reduce_large.cu
 
 Use a temporary array to store the reduced result from each block.
 
@@ -116,12 +118,14 @@ Use a temporary array to store the reduced result from each block.
 Interestingly, the scan code I studied from Nvidia website (http://http.developer.nvidia.com/GPUGems3/gpugems3_ch39.html) has bug and does not work correctly. How could you do this ```temp[pout*n+thid] += temp[pin*n+thid - offset]; ```? It should be ```temp[pout*n+thid] = temp[pout*n+thid] + temp[pin*n+thid - offset]; ```.
 
 - Scan with small input (1 block)
+
 > Code: scan_small.cu
 
 Scan with 1 block due to small number of elements to scan. 
 
 
 - Scan with large input (many blocks)
+
 > Code: scan_large.cu
 
 Use a temporary array to store the exclusively-scanned histogram from each block.

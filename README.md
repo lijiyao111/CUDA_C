@@ -105,10 +105,10 @@ Number of threads in a block need to be power of 2 (automatically taken care of 
 Use shared memory for performance. Shared memory assigned when calling the kernal.`kernal<<<blockDim, threadDim, sharedMemSpace>>>()`
 
 - Reduce with small input (1 block).
-> Code: reduce_small.cu
+- > Code: reduce_small.cu
 
 - Reduce with large input (many blocks)
-> Code: reduce_large.cu
+- > Code: reduce_large.cu
 
 Use a temporary array to store the reduced result from each block.
 

@@ -3,6 +3,7 @@
 It is good to understand some basic ideas of GPU parallelism, and getting familiar with some parallelism algorithms. And I have coded some simple CUDA C examples. However, from my experience, it is quite difficult to master most CUDA parallelism algorithms because of the complexity. For example, sorting in CUDA is way more complicated than sorting in serial. To write large scale code, using CUDA libraries is a must. 
 
 Some useful libraries in CUDA (either by Nvidia or third party):
+
 1. cuBLAS -- BLAS
 2. cuFFT -- 1D, 2D, 3D FFT
 3. cuSPARSE -- BLAS-like routines for sparse matrix
@@ -14,6 +15,7 @@ Some useful libraries in CUDA (either by Nvidia or third party):
 9. cuDNN -- Deep Neural Networks
 
 Lower-level libraries:
+
 1. thrust -- like C++ STL  -- host-side interface, no kernels, cannot set thread parameters (e.g. number of blocks, number of threads, shared memory)
 2. CUB -- more control
 3. CUDPP -- CUDA Data Parallel Primitives Library
@@ -21,6 +23,7 @@ Lower-level libraries:
 
 -------
 Simple Code Examples:
+
 1. Hello world
 2. Vector Add v1 -- one block, v2 -- several blocks
 3. Matrix Multiply, global mem and shared mem
@@ -32,10 +35,14 @@ Simple Code Examples:
 9. Radix Sort
 
 Udacity GPU class projects:
+// TODO: ADD some notes and codes of these 4 projects
+
 1. Map
 2. Histogram
 3. Histogram, Reduce, small Scan
 4. Histogram, Compact, large Scan, Radix sort
+
+
 
 
 ### Hello World Example

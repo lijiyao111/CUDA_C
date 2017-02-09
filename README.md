@@ -38,7 +38,7 @@ Udacity GPU class projects:
 // TODO: ADD some notes and codes of these 4 projects
 
 1. Map
-2. Histogram
+2. 2D Stencil
 3. Histogram, Reduce, small Scan
 4. Histogram, Compact, large Scan, Radix sort
 

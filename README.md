@@ -38,7 +38,7 @@ Simple Code Examples:
 > Udacity GPU class projects:
 > 
 > 1. Map
-> 2. 2D Stencil
+> 2. 2D Stencil (2D convolution)
 > 3. Histogram, Reduce, small Scan
 > 4. Histogram, Compact, large Scan, Radix sort
 
@@ -115,7 +115,7 @@ Use shared memory for performance. Shared memory assigned when calling the kerna
 Use a temporary array to store the reduced result from each block.
 
 ### Scan, 1 block vs arbitrary block
-Interestingly, the scan code I studied from Nvidia website (http://http.developer.nvidia.com/GPUGems3/gpugems3_ch39.html) has bug and does not work correctly. How could you do this ```temp[pout*n+thid] += temp[pin*n+thid - offset]; ```? It should be ```temp[pout*n+thid] = temp[pout*n+thid] + temp[pin*n+thid - offset]; ```.
+Interestingly, the scan code I studied from Nvidia website (http://http.developer.nvidia.com/GPUGems3/gpugems3_ch39.html) has bug and does not work correctly. How could you do this ```temp[pout*n+thid] += temp[pin*n+thid - offset]; ```? It should be ```temp[pout*n+thid] = temp[pin*n+thid] + temp[pin*n+thid - offset]; ```.
 
 - Scan with small input (1 block)
 
